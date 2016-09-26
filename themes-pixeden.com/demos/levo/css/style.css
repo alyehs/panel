@@ -165,11 +165,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 25, ../sass/modules/_colors.scss */
 .btn-skyblue {
-  background-color: #60c6cf;
+  background-color: #BF00FF;
 }
 /* line 27, ../sass/modules/_colors.scss */
 .btn-skyblue:hover {
-  background-color: #87d4db;
+  background-color: #CC2EFA;
 }
 /* line 30, ../sass/modules/_colors.scss */
 .btn-skyblue:focus, .btn-skyblue:active {
@@ -1823,7 +1823,7 @@ h3 {
 
 /* line 927, ../sass/partials/_typography.scss */
 a, a:hover, a:focus {
-  color: #66cccc;
+  color: #810682;
 }
 
 /* line 931, ../sass/partials/_typography.scss */
@@ -2169,7 +2169,7 @@ body {
 }
 /* line 144, ../sass/partials/_layout.scss */
 .main-nav--active .main-nav__icon {
-  background: #5fc5cf;
+  background: #810682;
   color: #fff;
 }
 
@@ -4260,7 +4260,7 @@ input:checked + .switch2::before {
   border: none;
   color: white;
   margin: 5px;
-  border-radius: 2px;
+  border-radius: 6px;
 }
 /* line 526, ../sass/partials/_modules.scss */
 .btn:hover, .btn:focus {
@@ -4308,8 +4308,8 @@ input:checked + .switch2::before {
 /* line 559, ../sass/partials/_modules.scss */
 .btn-light {
   border: 1px solid #e5e5e5;
-  color: #444444;
-  background-color: white;
+  color: #fff;
+  background-color: #810682;
 }
 /* line 563, ../sass/partials/_modules.scss */
 .btn-light:hover {
