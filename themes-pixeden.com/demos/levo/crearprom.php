@@ -58,7 +58,7 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
 				<ul class="dropdown-menu pull-right">
 					<li><a href="#"><i class="icon pe-7s-info"></i> Edit Profile</a></li>
 					<li><a href="#"><i class="icon pe-7s-date"></i> My Calendar</a></li>
-					<li><a href="login.html"><i class="icon pe-7s-close-circle"></i> Log Out</a></li>
+					<li><a href="cerrar.php"><i class="icon pe-7s-close-circle"></i> Log Out</a></li>
 				</ul>
 			</li>
 			<li class="profile--higlighted">
