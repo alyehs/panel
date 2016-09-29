@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
+{
+	header("location:menu.php");
+}
+
+ ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -7,8 +16,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Levo Admin Theme</title>
 
-	<link rel="apple-touch-icon" href="touch-icon-iphone.png" /> 
-	<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png" /> 
+	<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png" />
 	<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -28,21 +37,24 @@
 
 		<div class="row mtop-100">
 			<div class="col-md-4 col-md-offset-4 clearfix bg--dark">
-				
-				<div class="main-logo">Bies <span>Advertising</span>
-					<p>Bienvenido al panel de administración /</p>
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon"><i class="pe-7f-user"></i></span>
-					<input type="text" class="input-text form-control" placeholder="Username" />
-				</div>
-				<div class="input-group mtop-25">
-					<span class="input-group-addon"><i class="pe-7f-lock"></i></span>
-					<input type="password" class="input-text form-control" placeholder="Password" />
-				</div>
-				<div class="clearfix"></div>
-				<a href="inicio.html" class="btn btn-skyblue pull-right">Login</a>
 
+				<div class="main-logo">Bies <span>Advertising</span>
+					<p>Bienvenido al panel de administración </p>
+				</div>
+				<form action="services/Procesar.php" method="post">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="pe-7f-user"></i></span>
+							<input type="text" name="ud" class="input-text form-control" placeholder="Username" />
+						</div>
+						<div class="input-group mtop-25">
+							<span class="input-group-addon"><i class="pe-7f-lock"></i></span>
+							<input type="password" name="pas" class="input-text form-control" placeholder="Password" />
+						</div>
+						<div class="clearfix"></div>
+						<button class="btn btn-skyblue pull-right">ingresar</button>
+				<!--<input type="button" class="btn btn-skyblue pull-right" name="name" value="Login">-->
+				<!--<a href="inicio.html" class="btn btn-skyblue pull-right">Login</a>-->
+			</form>
 			</div>
 		</div>
 

@@ -1,4 +1,15 @@
-<!doctype html>
+
+<?php
+session_start();
+if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
+{
+
+}else {
+	header("location:login.php");
+}
+
+ ?>
+ <!doctype html>
 <html lang="en">
 
 <!-- Mirrored from themes-pixeden.com/demos/levo/tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Sep 2016 19:35:02 GMT -->
@@ -7,8 +18,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Levo Admin Theme</title>
 
-	<link rel="apple-touch-icon" href="touch-icon-iphone.png" /> 
-	<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png" /> 
+	<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png" />
 	<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -105,7 +116,7 @@
 						<li><a href="crearprom.html"><i class="pe-7s-note"></i><span>PROMOCIÓN</span></a></li>
 					</ul>
 				</li>
-				
+
 			</ul>
 		</aside> <!-- /main-nav -->
 
@@ -130,8 +141,8 @@
 
 		<!--
 	 		////////////////////////
-			Dynamic content STARTS here 
-			//////////////////////// 	
+			Dynamic content STARTS here
+			////////////////////////
 		-->
 
 
@@ -151,7 +162,7 @@
 					<div class="widget__content">
 						<input type="text" class="input-text" placeholder="Nombre" />
                         <input type="text" class="input-text" placeholder="Precio" />
-                         <input type="text" class="input-text" placeholder="Intereses" />                        
+                         <input type="text" class="input-text" placeholder="Intereses" />
                       <input type="date" class="input-text" placeholder+"Fecha Inicio" >
                         <input type="date" class="input-text" placeholder+"Fecha Fin" >
                          <input type="time" class="input-text" placeholder+"Hora Inicio">
@@ -178,19 +189,19 @@
 
 
 		<div class="row"><!-- /row -->
-			
-			
+
+
 
 
 
 		<!--
 	 		////////////////////////
-			Dynamic content ENDS here 
-			//////////////////////// 	
+			Dynamic content ENDS here
+			////////////////////////
 		-->
 
 	</section> <!-- /content -->
-	
+
 	<footer class="main-footer">
 		<a class="back-top" href="#"><i class="pe-7s-angle-up-circle"></i></a>
 		<p>2013 © Levo by Pixeden.</p>

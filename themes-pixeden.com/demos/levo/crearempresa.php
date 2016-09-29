@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
+{
+
+}else {
+	header("location:login.php");
+}
+
+ ?>
 <!doctype html>
 <html lang="en">
 
@@ -7,8 +17,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Levo Admin Theme</title>
 
-	<link rel="apple-touch-icon" href="touch-icon-iphone.png" /> 
-	<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png" /> 
+	<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png" />
 	<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -101,7 +111,7 @@
 						<li><a href="crearprom.html"><i class="pe-7s-note"></i><span>PROMOCIÓN</span></a></li>
 					</ul>
 				</li>
-				
+
 							</ul>
 		</aside>
 
@@ -125,8 +135,8 @@
 
 		<!--
 	 		////////////////////////
-			Dynamic content STARTS here 
-			//////////////////////// 	
+			Dynamic content STARTS here
+			////////////////////////
 		-->
 
 
@@ -148,7 +158,7 @@
                       <input type="text" class="input-text" placeholder="Nit" />
                       <input type="text" class="input-text" placeholder="Dirección" />
                       <input type="text" class="input-text" placeholder="Teléfono" />
-                        
+
 					  <div class="dropdown">
 							<select name="one" class="dropdown-select">
 								<option value="">Tipo</option>
@@ -159,7 +169,7 @@
 							</select>
 						</div>
 
-						
+
 						<button class="btn btn-light pull-right" type="submit">Submit</button>
 						<div class="clearfix"></div>
 					</div>
@@ -170,19 +180,19 @@
 
 
 		<div class="row"><!-- /row -->
-			
-			
+
+
 
 
 
 		<!--
 	 		////////////////////////
-			Dynamic content ENDS here 
-			//////////////////////// 	
+			Dynamic content ENDS here
+			////////////////////////
 		-->
 
 	</section> <!-- /content -->
-	
+
 	<footer class="main-footer">
 		<a class="back-top" href="#"><i class="pe-7s-angle-up-circle"></i></a>
 		<p>2013 © Levo by Pixeden.</p>

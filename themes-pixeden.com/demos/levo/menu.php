@@ -1,4 +1,14 @@
-<!doctype html>
+<?php
+session_start();
+if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
+{
+
+}else {
+	header("location:login.php");
+}
+
+ ?>
+ <!doctype html>
 <html lang="en">
 
 <!-- Mirrored from themes-pixeden.com/demos/levo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Sep 2016 19:33:42 GMT -->
@@ -7,8 +17,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Levo Admin Theme</title>
 
-	<link rel="apple-touch-icon" href="touch-icon-iphone.png" /> 
-	<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png" /> 
+	<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png" />
 	<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -20,13 +30,13 @@
 
 </head>
 <body>
-	
+
 	<header class="top-bar">
 		<a class="mobile-nav" href="#"><i class="pe-7s-menu"></i></a>
 		<div class="main-logo">BieS <span>Advertising</span></div>
 		<input type="checkbox" id="s-logo" class="sw" />
 		<label class="switch switch--dark switch--header" for="s-logo"></label>
-		
+
 		<div class="main-search">
 			<input type="text" placeholder="Search for task, goal &amp; review" id="msearch">
 			<label for="msearch">
@@ -46,7 +56,7 @@
 				<ul class="dropdown-menu pull-right">
 					<li><a href="#"><i class="icon pe-7s-info"></i> Edit Profile</a></li>
 					<li><a href="#"><i class="icon pe-7s-date"></i> My Calendar</a></li>
-					<li><a href="login.html"><i class="icon pe-7s-close-circle"></i> Log Out</a></li>
+					<li><a href="cerrar.php"><i class="icon pe-7s-close-circle"></i> Log Out</a></li>
 				</ul>
 			</li>
 			<li class="profile--higlighted">
@@ -123,7 +133,7 @@
 			</ul>
 		</aside> <!-- /main-nav -->
 
-		
+
 		<section class="content">
 			<header class="main-header clearfix">
 				<h1 class="main-header__title">
@@ -141,7 +151,7 @@
 					<i class="pe-7s-angle-down-circle"></i>
 				</div>
 			</header>
-			
+
 			<div class="main-stats row">
 				<div class="main-stats__stat col-lg-3 col-md-12 col-sm-12">
 					<div class="widget__config">
@@ -157,7 +167,7 @@
 						<strong>27%</strong> more than last month
 					</p>
 				</div> <!-- /col -->
-				
+
 				<div class="main-stats__stat col-lg-3 col-md-12 col-sm-12">
 					<div class="widget__config">
 						<a href="#"><i class="pe-7f-refresh"></i></a>
@@ -205,7 +215,7 @@
 			</div> <!-- row -->
 
 			<div class="row">
-				
+
 				<div class="col-md-7">
 					<article class="widget">
 						<header class="widget__header">
@@ -227,7 +237,7 @@
 									<div class="mini-barchart__text">
 										<p>New members</p>
 										<h3>7,068</h3>
-									</div> 
+									</div>
 									<svg xmlns="http://www.w3.org/2000/svg" width="113.1px" height="52.5px" viewBox="0 0 113.1 52.5" class="mini-barchart--home">
 										<g>
 											<polygon style="fill:#B1E0E6;" points="18.3,51.5 0.5,51.5 0.5,7.4 18.3,17.6 	"/>
@@ -246,7 +256,7 @@
 										<div class="mini-barchart__text">
 											<p>New orders</p>
 											<h3>2,407</h3>
-										</div> 
+										</div>
 										<svg xmlns="http://www.w3.org/2000/svg" width="113.1px" height="52.5px" viewBox="0 0 113.1 52.5" class="mini-barchart--home">
 											<g>
 												<polygon style="fill:#F8ACAB;" points="17.8,52 0,52 0,29.5 17.8,40.3 	"/>
@@ -260,7 +270,7 @@
 										</svg>
 									</div>
 								</div>
-								
+
 							</div> <!-- /row -->
 
 						</div>
@@ -286,7 +296,7 @@
 								</div>
 								<div id="chartdonut" style="width: 100%; height: 362px;"></div>
 							</figure>
-							
+
 							<div class="row center">
 								<div class="mini-donut col-md-3">
 									<div class="circle">
@@ -295,7 +305,7 @@
 									</div> <!-- /circle -->
 									<span>Visits</span>
 								</div>
-								
+
 								<div class="mini-donut col-md-3">
 									<div class="circle">
 										<div class="arc" id="arc-2"><div class="arc-in violet"></div></div>
@@ -328,16 +338,16 @@
 
 			</div> <!-- /row -->
 
-			
-				
 
 
-				
-						
+
+
+
+
 
 
 			</section> <!-- /content -->
-			
+
 			<footer class="main-footer">
 				<a class="back-top" href="#"><i class="pe-7s-angle-up-circle"></i></a>
 				<p>2016 © BieS.</p>
@@ -346,8 +356,8 @@
 		</div> <!-- /wrapper -->
 
 
-		
-		
+
+
 
 		<!-- Scripts -->
 		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
@@ -364,6 +374,6 @@
 
 
 	</body>
-	
+
 <!-- Mirrored from themes-pixeden.com/demos/levo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Sep 2016 19:34:17 GMT -->
 </html>
