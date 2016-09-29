@@ -100,27 +100,19 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
 						Dashboard <span class="badge main-nav__badge badge--red">8</span>
 					</a>
 				</li>
-				<!--<li>
-					<a class="main-nav__link" href="ui.html">
-						<span class="main-nav__icon"><i class="icon pe-7s-edit"></i></span>
-						UI Elements
-					</a>
-				</li>-->
 				<li class="main-nav--collapsible">
 					<a class="main-nav__link" href="#">
 						<span class="main-nav__icon"><i class="icon pe-7s-photo-gallery"></i></span>
 						ADMINISTRAR
 					</a>
 					<ul class="main-nav__submenu">
-						<li><a href="crearempresa.html"><i class="pe-7s-help1"></i><span>EMPRESA</span></a></li>
-						<li><a href="crearprom.html"><i class="pe-7s-note"></i><span>PROMOCIÓN</span></a></li>
+						<li><a href="crearempresa.php"><i class="pe-7s-help1"></i><span>EMPRESA</span></a></li>
+						<li><a href="crearprom.php"><i class="pe-7s-note"></i><span>PROMOCIÓN</span></a></li>
 					</ul>
 				</li>
 
 			</ul>
 		</aside> <!-- /main-nav -->
-
-
 		<section class="content">
 			<header class="main-header clearfix">
 				<h1 class="main-header__title">
@@ -137,16 +129,6 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
 					<i class="pe-7s-angle-down-circle"></i>
 				</div>
 			</header>
-
-
-		<!--
-	 		////////////////////////
-			Dynamic content STARTS here
-			////////////////////////
-		-->
-
-
-
 		<div class="row">
 
 			<div class="col-md-12">
@@ -158,49 +140,43 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
 							<a href="#"><i class="pe-7s-close"></i></a>
 						</div>
 					</header>
-
+	<form id="formulario" method="post">
 					<div class="widget__content">
-						<input type="text" class="input-text" placeholder="Nombre" />
-                        <input type="text" class="input-text" placeholder="Precio" />
-                         <input type="text" class="input-text" placeholder="Intereses" />
-                      <input type="date" class="input-text" placeholder+"Fecha Inicio" >
-                        <input type="date" class="input-text" placeholder+"Fecha Fin" >
-                         <input type="time" class="input-text" placeholder+"Hora Inicio">
-                         <input type="time" class="input-text" placeholder+"Hora Fin">
+						<input type="text" name="nom" class="input-text" placeholder="Nombre" />
+            <input type="text" name="pre" class="input-text" placeholder="Precio" />
+            <input type="text" name="int" class="input-text" placeholder="Intereses" />
+          	<input type="date" name="fi" class="input-text" placeholder+"Fecha Inicio" >
+            <input type="date" name="ff" class="input-text" placeholder+"Fecha Fin" >
+            <input type="time" name="hi" class="input-text" placeholder+"Hora Inicio">
+            <input type="time" name="hf" class="input-text" placeholder+"Hora Fin">
 						<div class="dropdown">
-							<select name="one" class="dropdown-select">
+							<select name="emp" class="dropdown-select">
+								<option value="">Empresa</option>
+								<option value="1">Option #1</option>
+								<option value="2">Option #2</option>
+								<option value="3">Option #3</option>
+							</select>
+						</div><br>
+						<div class="dropdown">
+							<select name="suc" class="dropdown-select">
 								<option value="">Sucursal</option>
 								<option value="1">Option #1</option>
 								<option value="2">Option #2</option>
 								<option value="3">Option #3</option>
 							</select>
 						</div>
-
 						<input type="file" name="uploader" id="uploader">
 						<label for="uploader">Subir Imagen Promocional</label>
-
-						<button class="btn btn-light pull-right" type="submit">Submit</button>
+						<input type="submit" class="btn btn-light pull-right" id="btn-grabar-prom" value="Crear Promocion">
 						<div class="clearfix"></div>
+						<span id="loader_grabar" class=""></span>
 					</div>
-
+</form>
 				</article>
 			</div>
 		</div>
-
-
-		<div class="row"><!-- /row -->
-
-
-
-
-
-		<!--
-	 		////////////////////////
-			Dynamic content ENDS here
-			////////////////////////
-		-->
-
-	</section> <!-- /content -->
+		<div class="row">
+			</section> <!-- /content -->
 
 	<footer class="main-footer">
 		<a class="back-top" href="#"><i class="pe-7s-angle-up-circle"></i></a>
@@ -208,11 +184,6 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
 	</footer>
 
 </div> <!-- /wrapper -->
-
-
-
-
-
 <!-- Scripts -->
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.js"></script>
@@ -225,9 +196,6 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
 <script src="jquery-jvectormap-1.2.2/jquery-jvectormap-1.2.2.min.js"></script>
 <script src="jquery-jvectormap-1.2.2/jquery-jvectormap-us-aea-en.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-
-
 </body>
-
 <!-- Mirrored from themes-pixeden.com/demos/levo/tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Sep 2016 19:35:02 GMT -->
 </html>

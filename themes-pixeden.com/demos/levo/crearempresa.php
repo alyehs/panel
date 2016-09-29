@@ -17,17 +17,12 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Levo Admin Theme</title>
 
-	<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png" />
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-
 	<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
 
 	<link rel="stylesheet" href="../../../code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 	<link rel="stylesheet" href="jquery-jvectormap-1.2.2/jquery-jvectormap-1.2.2.css"/>
 	<link href="css/style.css" rel="stylesheet" />
+
 
 </head>
 <body>
@@ -107,13 +102,13 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
 						ADMINISTRAR
 					</a>
 					<ul class="main-nav__submenu">
-						<li><a href="crearempresa.html"><i class="pe-7s-help1"></i><span>EMPRESA</span></a></li>
-						<li><a href="crearprom.html"><i class="pe-7s-note"></i><span>PROMOCIÓN</span></a></li>
+						<li><a href="crearempresa.php"><i class="pe-7s-help1"></i><span>EMPRESA</span></a></li>
+						<li><a href="crearprom.php"><i class="pe-7s-note"></i><span>PROMOCIÓN</span></a></li>
 					</ul>
 				</li>
 
 							</ul>
-		</aside>
+		</aside>|
 
 		<section class="content">
 			<header class="main-header clearfix">
@@ -131,16 +126,6 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
 					<i class="pe-7s-angle-down-circle"></i>
 				</div>
 			</header>
-
-
-		<!--
-	 		////////////////////////
-			Dynamic content STARTS here
-			////////////////////////
-		-->
-
-
-
 		<div class="row">
 
 			<div class="col-md-12">
@@ -153,57 +138,40 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
 						</div>
 					</header>
 
-					<div class="widget__content">
-						<input type="text" class="input-text" placeholder="Nombre" />
-                      <input type="text" class="input-text" placeholder="Nit" />
-                      <input type="text" class="input-text" placeholder="Dirección" />
-                      <input type="text" class="input-text" placeholder="Teléfono" />
+	<form id="formulario" method="post">
 
+					<div class="widget__content">
+						<input type="text" name="nom" class="input-text" placeholder="Nombre" />
+            <input type="text" name="nit" class="input-text" placeholder="Nit" />
+            <input type="text" name="dir" class="input-text" placeholder="Dirección" />
+            <input type="text" name="tel" class="input-text" placeholder="Teléfono" />
 					  <div class="dropdown">
-							<select name="one" class="dropdown-select">
+							<select name="ti" class="dropdown-select">
 								<option value="">Tipo</option>
 								<option value="1">Bar/Discoteca</option>
 								<option value="2">Centro Comercial</option>
 								<option value="3">Local</option>
-                                <option value="4">Restaurante</option>
+                <option value="4">Restaurante</option>
 							</select>
 						</div>
-
-
-						<button class="btn btn-light pull-right" type="submit">Submit</button>
+						<input type="submit" class="btn btn-light pull-right" id="btn-grabar" value="Guardar">
 						<div class="clearfix"></div>
+						<span id="loader_grabar" class=""></span>
 					</div>
-
+</form>
 				</article>
 			</div>
 		</div>
 
 
 		<div class="row"><!-- /row -->
-
-
-
-
-
-		<!--
-	 		////////////////////////
-			Dynamic content ENDS here
-			////////////////////////
-		-->
-
 	</section> <!-- /content -->
 
 	<footer class="main-footer">
 		<a class="back-top" href="#"><i class="pe-7s-angle-up-circle"></i></a>
 		<p>2013 © Levo by Pixeden.</p>
 	</footer>
-
 </div> <!-- /wrapper -->
-
-
-
-
-
 <!-- Scripts -->
 <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.js"></script>
@@ -216,9 +184,6 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
 <script src="jquery-jvectormap-1.2.2/jquery-jvectormap-1.2.2.min.js"></script>
 <script src="jquery-jvectormap-1.2.2/jquery-jvectormap-us-aea-en.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-
-
 </body>
-
 <!-- Mirrored from themes-pixeden.com/demos/levo/tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Sep 2016 19:35:02 GMT -->
 </html>

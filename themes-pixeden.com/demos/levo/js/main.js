@@ -7,7 +7,7 @@ function tabby(id){
 
 		$(document).ready(function(){
 
-			/* 
+			/*
 			// Collapsible
 			$('.main-nav--collapsible > .main-nav__link').click(function(){
 				$(this).parent().toggleClass('main-nav--open');
@@ -19,10 +19,10 @@ function tabby(id){
 			*/
 			$(window).load(function(){
 				var id = $('.tabs input:checked').attr('id');
-				tabby(id);	
+				tabby(id);
 			})
 
-			
+
 			$( window ).resize(function(){
 				var id = $('.tabs input:checked').attr('id');
 				tabby(id);
@@ -82,6 +82,71 @@ function tabby(id){
 				$('html, body').animate({scrollTop:0}, 500);
         return false;
 			})
+
+
+//boton grabar empresa
+			$("#btn-grabar").on("click", function() {
+					var f = $("#formulario");
+
+					var loader_grabar = $("#loader_grabar");
+					$.ajax({
+							type: "post",
+							url: "services/iajax.php",
+							dataType: "JSON",
+							data: f.serialize() + "&tipo=grabar",
+							success: function(data) {
+									//alert(data.mensaje);
+									if (data.estado == "ok") {
+											loader_grabar.removeClass("label-warning").addClass("label-success").text("Datos Grabados!").delay(3000).slideUp();
+
+									} else {
+											alert(data.mensaje);
+									}
+
+							},
+							beforeSend: function() {
+									loader_grabar.removeClass("label-success").addClass("label label-warning").text("Procesando...").slideDown();
+							},
+							complete: function() {
+
+
+									$("form")[0].reset();
+							}
+					});
+					return false;
+			});//fin boton grabar empresa
+
+			//boton grabar promocion
+						$("#btn-grabar-prom").on("click", function() {
+								var f = $("#formulario");
+
+								var loader_grabar = $("#loader_grabar");
+								$.ajax({
+										type: "post",
+										url: "services/iajax.php",
+										dataType: "JSON",
+										data: f.serialize() + "&tipo=grabarprom",
+										success: function(data) {
+												//alert(data.mensaje);
+												if (data.estado == "ok") {
+														loader_grabar.removeClass("label-warning").addClass("label-success").text("Datos Grabados!").delay(3000).slideUp();
+
+												} else {
+														alert(data.mensaje);
+												}
+
+										},
+										beforeSend: function() {
+												loader_grabar.removeClass("label-success").addClass("label label-warning").text("Procesando...").slideDown();
+										},
+										complete: function() {
+
+
+												$("form")[0].reset();
+										}
+								});
+								return false;
+						});//fin boton grabar promocion
 
 
 }) // Ready
