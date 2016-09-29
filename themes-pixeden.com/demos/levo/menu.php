@@ -108,8 +108,8 @@ if (isset($_SESSION["usuario"]) && isset($_SESSION["pass"]))
 						ADMINISTRAR
 					</a>
 					<ul class="main-nav__submenu">
-						<li><a href="crearempresa.html"><i class="pe-7s-help1"></i><span>EMPRESA</span></a></li>
-						<li><a href="crearprom.html"><i class="pe-7s-note"></i><span>PROMOCIÓN</span></a></li>
+						<li><a href="crearempresa.php"><i class="pe-7s-help1"></i><span>EMPRESA</span></a></li>
+						<li><a href="crearprom.php"><i class="pe-7s-note"></i><span>PROMOCIÓN</span></a></li>
 					</ul>
 				</li>
 				<li>
